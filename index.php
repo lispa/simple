@@ -1,7 +1,5 @@
 <?php
 require_once "header.php";
-//unset($_SESSION["ERRORS"]);
-if(isset($_SESSION["ERRORS"])) $arErrors = $_SESSION["ERRORS"];
 ?>
 <div class="container">
     <div class="py-5 text-center">
@@ -11,8 +9,8 @@ if(isset($_SESSION["ERRORS"])) $arErrors = $_SESSION["ERRORS"];
 
     <div class="col-md-8 order-md-1">
 
-        <?if(isset($arErrors)):?>
-            <?foreach ($arErrors as $error):?>
+        <? if(isset($_SESSION["ERRORS"]) && !empty($_SESSION["ERRORS"])):?>
+            <?foreach ($_SESSION["ERRORS"] as $error):?>
                 <div class="alert alert-danger" role="alert">
                     <?if(is_array($error)):?>
                         <?var_dump($error)?>

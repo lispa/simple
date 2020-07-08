@@ -16,7 +16,6 @@ switch ($_REQUEST["action"]){
             $query = http_build_query($_POST);
             $_SESSION["ERRORS"] = $arErrors;
             header("Location: http://localhost:8080/index.php?".$query);
-            exit();
         }
         break;
     case "personal":

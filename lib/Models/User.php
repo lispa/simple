@@ -18,6 +18,7 @@ class User
     private $created_add;
     private $password;
     private $avatar;
+    public $permissions = "none";
 
     function __construct($arFields) {
         $this->name = $arFields["name"];
